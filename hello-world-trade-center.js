@@ -12,6 +12,7 @@ const base_api_url = "https://pommesdeterre.herokuapp.com/api/";
     await Promise.all(users.map(async user => {
       // grab their general url
       const user_url = users_url + user.id
+      // delete all of them
       await axios.delete(user_url)
     }))
   } catch (err) {
